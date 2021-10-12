@@ -13,8 +13,24 @@ fun challengeOne() {
 
     val response = readLine()
     if (answer.contains(response)) {
-        println("correctAnswer")
+        //println("correctAnswer")
+        challengeTwo()
     } else {
         println("gameOver")
     }
+
+}
+
+fun challengeTwo() {
+    val diceResult = (1..6).random() //0..6 = 1 tot aan 6
+    val response = readLine()
+
+    if (response == "low" && (1..3).contains(diceResult)) {
+        //win
+    } else if (response == "high" && (4..6).contains(diceResult)) {
+    //win
+    }  else {
+        //game over
+}
+
 }
