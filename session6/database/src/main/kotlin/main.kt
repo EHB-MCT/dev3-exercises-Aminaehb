@@ -19,11 +19,11 @@ fun main() {
         connectionProps)
 
 // Create the statement
-    val statement = connection.prepareStatement("SELECT COUNT * FROM productName")
+    val statement = connection.prepareStatement("SELECT * FROM products")
     val result = statement.executeQuery()
-    println(result);
-// Create the result
-    while(result.next()) {
-        result.getString("productName")
+    while (result.next()) {
+        val cities = result.getString("productName")
+        println(products)
     }
+// Create the result
 }
